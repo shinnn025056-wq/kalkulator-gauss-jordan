@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kalkulator Gauss-Jordan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Kalkulator Gauss-Jordan</h1>
+
+        <p class="deskripsi">
+            Masukkan ukuran matriks, kemudian isi nilai matriks
+            untuk mendapatkan bentuk Reduced Row Echelon Form (RREF).
+        </p>
+
+        <div class="pengaturan">
+
+            <div class="input-grup">
+                <label for="baris">Jumlah Baris</label>
+                <input
+                    type="number"
+                    id="baris"
+                    min="1"
+                    max="10"
+                    value="2"
+                >
+            </div>
+
+            <div class="input-grup">
+                <label for="kolom">Jumlah Kolom</label>
+                <input
+                    type="number"
+                    id="kolom"
+                    min="1"
+                    max="10"
+                    value="3"
+                >
+            </div>
+
+        </div>
+
+        <div class="tombol-grup">
+
+            <button
+                class="btn utama"
+                onclick="buatMatriks()"
+            >
+                Buat Matriks
+            </button>
+
+            <button
+                class="btn hitung"
+                onclick="hitungGaussJordan()"
+            >
+                Hitung Gauss-Jordan
+            </button>
+
+            <button
+                class="btn reset"
+                onclick="resetKalkulator()"
+            >
+                Reset
+            </button>
+
+        </div>
+
+        <div id="pesan"></div>
+
+        <div class="bagian">
+
+            <h2>Matriks Input</h2>
+
+            <div id="matriks"></div>
+
+        </div>
+
+        <div class="bagian hasil-bagian">
+
+            <div id="hasil"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

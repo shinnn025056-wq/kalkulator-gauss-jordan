@@ -1,0 +1,668 @@
+/* =========================================
+   NARUTO / NINJA THEME
+   KALKULATOR GAUSS-JORDAN
+========================================= */
+
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 40px 20px;
+
+    min-height: 100vh;
+
+    color: #222;
+
+    background:
+        linear-gradient(
+            rgba(20, 20, 20, 0.88),
+            rgba(20, 20, 20, 0.88)
+        ),
+        linear-gradient(
+            135deg,
+            #ff8c00,
+            #d62828,
+            #111
+        );
+
+}
+
+
+/* CONTAINER UTAMA */
+.container {
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background-color: #f4f4f4;
+
+    border: 5px solid #111;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 0 4px #e67e22,
+        0 15px 40px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header-ninja {
+
+    text-align: center;
+
+    padding-bottom: 25px;
+
+}
+
+
+/* SIMBOL */
+.simbol {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 42px;
+
+    background-color: #e67e22;
+
+    border: 4px solid #111;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 4px 0 #111;
+
+}
+
+
+/* JUDUL */
+h1 {
+
+    margin: 0;
+
+    color: #111;
+
+    font-size: 34px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* GARIS */
+.garis {
+
+    width: 180px;
+
+    height: 6px;
+
+    margin: 12px auto;
+
+    background-color: #d63031;
+
+    border-radius: 10px;
+
+}
+
+
+/* SUBJUDUL */
+.subjudul {
+
+    margin: 5px 0;
+
+    color: #d63031;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* DESKRIPSI */
+.deskripsi {
+
+    max-width: 700px;
+
+    margin: 15px auto 0;
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   PANEL
+========================================= */
+
+.panel {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border: 2px solid #222;
+
+    border-left: 8px solid #e67e22;
+
+    border-radius: 10px;
+
+    box-shadow:
+        4px 4px 0 #222;
+
+}
+
+
+/* JUDUL PANEL */
+.panel h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: #222;
+
+    font-size: 21px;
+
+}
+
+
+/* =========================================
+   PENGATURAN
+========================================= */
+
+.pengaturan {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.input-grup {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.input-grup label {
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #333;
+
+}
+
+
+.input-grup input {
+
+    width: 110px;
+
+    padding: 12px;
+
+    border: 2px solid #333;
+
+    border-radius: 7px;
+
+    background-color: #fafafa;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+.input-grup input:focus {
+
+    outline: none;
+
+    border-color: #e67e22;
+
+    box-shadow:
+        0 0 0 3px rgba(230, 126, 34, 0.25);
+
+}
+
+
+/* TANDA X */
+.x {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #d63031;
+
+}
+
+
+/* =========================================
+   TOMBOL
+========================================= */
+
+.tombol-grup {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+}
+
+
+/* SEMUA BUTTON */
+.btn {
+
+    border: 3px solid #111;
+
+    border-radius: 7px;
+
+    padding: 12px 22px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 4px 0 #111;
+
+}
+
+
+/* HOVER */
+.btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 0 #111;
+
+}
+
+
+/* SAAT DIKLIK */
+.btn:active {
+
+    transform: translateY(3px);
+
+    box-shadow:
+        0 1px 0 #111;
+
+}
+
+
+/* BUTTON BUAT */
+.utama {
+
+    background-color: #e67e22;
+
+    color: white;
+
+}
+
+
+/* BUTTON HITUNG */
+.hitung {
+
+    background-color: #d63031;
+
+    color: white;
+
+}
+
+
+/* BUTTON RESET */
+.reset {
+
+    background-color: #333;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   PESAN
+========================================= */
+
+#pesan {
+
+    text-align: center;
+
+    margin: 25px 0;
+
+    font-weight: bold;
+
+    min-height: 20px;
+
+}
+
+
+.pesan-error {
+
+    color: #c0392b;
+
+}
+
+
+.pesan-sukses {
+
+    color: #27ae60;
+
+}
+
+
+/* =========================================
+   INPUT MATRIKS
+========================================= */
+
+#matriks {
+
+    margin: 20px auto;
+
+}
+
+
+.scroll-matriks {
+
+    overflow-x: auto;
+
+    padding: 10px;
+
+}
+
+
+.baris-matriks {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.input-matriks {
+
+    width: 70px;
+
+    height: 45px;
+
+    margin: 5px;
+
+    padding: 5px;
+
+    border: 2px solid #333;
+
+    border-radius: 6px;
+
+    background-color: #fff;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+.input-matriks:focus {
+
+    outline: none;
+
+    border-color: #e67e22;
+
+    box-shadow:
+        0 0 0 3px rgba(230, 126, 34, 0.2);
+
+}
+
+
+/* =========================================
+   HASIL
+========================================= */
+
+.hasil-bagian {
+
+    border-left-color: #d63031;
+
+}
+
+
+#hasil h2 {
+
+    color: #d63031;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* TABEL */
+.tabel-hasil {
+
+    margin: 20px auto;
+
+    border-collapse: collapse;
+
+}
+
+
+/* CELL */
+.tabel-hasil td {
+
+    border: 3px solid #222;
+
+    padding: 12px 22px;
+
+    min-width: 70px;
+
+    background-color: #fff;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+/* BARIS SELANG-SELING */
+.tabel-hasil tr:nth-child(even) td {
+
+    background-color: #f9e0c0;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 3px solid #222;
+
+    text-align: center;
+
+}
+
+
+.footer .kunai {
+
+    font-size: 30px;
+
+}
+
+
+.footer p {
+
+    margin: 8px 0;
+
+    color: #d63031;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.footer small {
+
+    color: #777;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px 10px;
+
+    }
+
+
+    .container {
+
+        padding: 20px 15px;
+
+        border-width: 3px;
+
+    }
+
+
+    h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .subjudul {
+
+        font-size: 14px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .pengaturan {
+
+        gap: 12px;
+
+    }
+
+
+    .tombol-grup {
+
+        flex-direction: column;
+
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+
+    .input-matriks {
+
+        width: 55px;
+
+        height: 40px;
+
+    }
+
+
+    .tabel-hasil td {
+
+        padding: 9px 13px;
+
+        min-width: 55px;
+
+        font-size: 15px;
+
+    }
+
+}
